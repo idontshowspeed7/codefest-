@@ -30,7 +30,7 @@ offset_left = 633.72
 offset_top = 261.824
 offset_right = 578.6
 offset_bottom = 248.56
-text = "LOCAL MULTIPLAYER"
+text = "SINGLEPLAYER"
 script = ExtResource("2_1q5i2")
 
 [node name="Button2" type="Button" parent="TextureRect"]
@@ -38,7 +38,7 @@ offset_left = 63.0
 offset_top = 385.0
 offset_right = 365.0
 offset_bottom = 513.0
-text = "SINGLEPLAYER"
+text = "LOCAL MULTIPLAYER"
 
 [node name="Button" type="Button" parent="TextureRect"]
 offset_left = 438.0
