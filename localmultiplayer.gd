@@ -1,5 +1,5 @@
 extends Node
 
 
-func _on_local_pressed():
+func _button_pressed():
 	get_tree().change_scene_to_file("res://node.tscn")
