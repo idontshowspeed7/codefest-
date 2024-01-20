@@ -6,7 +6,7 @@ const JUMP_VELOCITY = -700.0
 @onready var animation_name = $CharacterBody2D
 
 # Gravity variable
-var gravity = 1900
+var gravity = 1300
 
 # Keep track of the current animation state
 var current_animation = "default"
@@ -41,6 +41,3 @@ func _physics_process(_delta):
 	# Flip the sprite based on the movement direction.
 		var is_left = velocity.x < 0
 		sprite_2d.flip_h = is_left
-
-
-			
