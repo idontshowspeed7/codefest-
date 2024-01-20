@@ -25,8 +25,11 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_y7juc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_poiin")
 }],
-"loop": true,
+"loop": false,
 "name": &"punch",
 "speed": 5.0
 }]
@@ -78,6 +81,8 @@ position = Vector2(132.438, 463.063)
 scale = Vector2(7.09766, 8.06641)
 sprite_frames = SubResource("SpriteFrames_jeulh")
 animation = &"punch"
+frame = 2
+frame_progress = 1.0
 flip_h = true
 script = ExtResource("6_3uyso")
 
