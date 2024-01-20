@@ -132,14 +132,14 @@ position = Vector2(162, 452)
 shape = SubResource("RectangleShape2D_a03y3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(154, 313)
+position = Vector2(127, 314)
 shape = SubResource("RectangleShape2D_no5dh")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_left = 60.0
-offset_top = 302.0
-offset_right = 252.0
-offset_bottom = 325.0
+offset_left = 33.0
+offset_top = 301.0
+offset_right = 225.0
+offset_bottom = 324.0
 value = 100.0
 fill_mode = 1
 nine_patch_stretch = true
