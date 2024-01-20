@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvbbj7ltnbsum"]
+[gd_scene load_steps=9 format=3 uid="uid://bvbbj7ltnbsum"]
 
 [ext_resource type="Texture2D" uid="uid://c2xlthkxu0kad" path="res://backg1.png" id="1_lr1ic"]
 [ext_resource type="Texture2D" uid="uid://ca6ssdwtbo33m" path="res://ground.png" id="2_huyi0"]
@@ -7,6 +7,12 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7gk5"]
 size = Vector2(1150, 171)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gtghr"]
+size = Vector2(87, 813)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkjfl"]
+size = Vector2(103, 813)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a03y3"]
 size = Vector2(215, 211)
@@ -38,6 +44,14 @@ position = Vector2(575, 645.5)
 shape = SubResource("RectangleShape2D_c7gk5")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TextureRect"]
+position = Vector2(-44.5, 396.5)
+shape = SubResource("RectangleShape2D_gtghr")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TextureRect"]
+position = Vector2(1204.5, 396.5)
+shape = SubResource("RectangleShape2D_nkjfl")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("3_swaf2")
 
@@ -46,7 +60,22 @@ texture_filter = 1
 position = Vector2(132.438, 463.063)
 scale = Vector2(7.09766, 8.06641)
 texture = ExtResource("2_y7juc")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(132.5, 454.5)
+shape = SubResource("RectangleShape2D_a03y3")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+script = ExtResource("3_swaf2")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
+texture_filter = 1
+position = Vector2(132.438, 463.063)
+scale = Vector2(7.09766, 8.06641)
+texture = ExtResource("2_y7juc")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
 position = Vector2(132.5, 454.5)
 shape = SubResource("RectangleShape2D_a03y3")
