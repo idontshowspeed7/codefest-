@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvbbj7ltnbsum"]
+[gd_scene load_steps=7 format=3 uid="uid://bvbbj7ltnbsum"]
 
 [ext_resource type="Texture2D" uid="uid://c2xlthkxu0kad" path="res://backg1.png" id="1_lr1ic"]
+[ext_resource type="Texture2D" uid="uid://ca6ssdwtbo33m" path="res://ground.png" id="2_huyi0"]
 [ext_resource type="Texture2D" uid="uid://5nvo6qf6r88u" path="res://dude1.png" id="2_y7juc"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="3_swaf2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7gk5"]
+size = Vector2(1150, 171)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a03y3"]
+size = Vector2(215, 211)
 
 [node name="Node" type="Node"]
 
@@ -14,8 +22,31 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_lr1ic")
 
-[node name="dude" type="Sprite2D" parent="."]
+[node name="TextureRect" type="StaticBody2D" parent="."]
 texture_filter = 1
-position = Vector2(210, 495)
-scale = Vector2(4.65625, 5.21875)
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+texture_filter = 1
+offset_left = -2.0
+offset_top = 561.0
+offset_right = 1150.0
+offset_bottom = 807.0
+texture = ExtResource("2_huyi0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect"]
+position = Vector2(575, 645.5)
+shape = SubResource("RectangleShape2D_c7gk5")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("3_swaf2")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(132.438, 463.063)
+scale = Vector2(7.09766, 8.06641)
 texture = ExtResource("2_y7juc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(132.5, 454.5)
+shape = SubResource("RectangleShape2D_a03y3")
