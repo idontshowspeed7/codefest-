@@ -1,24 +1,26 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3a5p60mvrf21"]
+[gd_scene load_steps=15 format=3 uid="uid://d3a5p60mvrf21"]
 
-[ext_resource type="Texture2D" uid="uid://chrjntgjojawl" path="res://flippedpics/dude2flipped.png" id="2_wej1h"]
-[ext_resource type="Texture2D" uid="uid://b3odtg1fkau47" path="res://flippedpics/run2flipped.png" id="3_jp5t5"]
-[ext_resource type="Texture2D" uid="uid://dtyicat3cx0kt" path="res://flippedpics/jump1flipped.png" id="4_qkgmu"]
-[ext_resource type="Texture2D" uid="uid://7yrt2tyweoly" path="res://flippedpics/jump2flipped.png" id="5_4rlc8"]
-[ext_resource type="Texture2D" uid="uid://cbvcmmfbbavka" path="res://flippedpics/jump3flipped.png" id="6_csyhl"]
-[ext_resource type="Texture2D" uid="uid://dkb7l1mgtkdg0" path="res://flippedpics/dudekickflipped.png" id="7_ad4fd"]
-[ext_resource type="Texture2D" uid="uid://br2grx70jbvdb" path="res://dude1flipped.png" id="8_u58b3"]
-[ext_resource type="Texture2D" uid="uid://dqja16im1jc24" path="res://flippedpics/dudebounceflipped.png" id="9_kel6i"]
+[ext_resource type="Script" path="res://person2.gd" id="1_ierp7"]
+[ext_resource type="Texture2D" uid="uid://u4xti7l3m2p8" path="res://dude 2.png" id="2_2yri3"]
+[ext_resource type="Texture2D" uid="uid://cpgorx50o70we" path="res://dudebounce.png" id="3_w5w2y"]
+[ext_resource type="Texture2D" uid="uid://dmcmyjwmbmkqd" path="res://jump1.png" id="4_o8tur"]
+[ext_resource type="Texture2D" uid="uid://b81wbw0vkiauv" path="res://jump2.png" id="5_6joe6"]
+[ext_resource type="Texture2D" uid="uid://ci0j00jvfh6u3" path="res://jump3.png" id="6_fguym"]
+[ext_resource type="Texture2D" uid="uid://8exgg206y3m6" path="res://dudekick.png" id="7_af182"]
+[ext_resource type="Texture2D" uid="uid://5nvo6qf6r88u" path="res://dude1.png" id="8_thkxb"]
+[ext_resource type="Texture2D" uid="uid://dlc5x6o6n151a" path="res://run2.png" id="9_vlgl5"]
 [ext_resource type="Texture2D" uid="uid://cskkgyfkuug2q" path="res://healthbar2.png" id="10_lwq5f"]
 [ext_resource type="Texture2D" uid="uid://ch2cwngtdeh5c" path="res://health1.png" id="11_7syb6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jeulh"]
+resource_local_to_scene = true
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_wej1h")
+"texture": ExtResource("2_2yri3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_jp5t5")
+"texture": ExtResource("3_w5w2y")
 }],
 "loop": true,
 "name": &"default",
@@ -26,19 +28,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_wej1h")
+"texture": ExtResource("2_2yri3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_qkgmu")
+"texture": ExtResource("4_o8tur")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_4rlc8")
+"texture": ExtResource("5_6joe6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_csyhl")
+"texture": ExtResource("6_fguym")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_wej1h")
+"texture": ExtResource("2_2yri3")
 }],
 "loop": false,
 "name": &"jump",
@@ -46,45 +48,45 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_wej1h")
+"texture": ExtResource("2_2yri3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_qkgmu")
+"texture": ExtResource("4_o8tur")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_ad4fd")
+"texture": ExtResource("7_af182")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_ad4fd")
+"texture": ExtResource("7_af182")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_ad4fd")
+"texture": ExtResource("7_af182")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_ad4fd")
+"texture": ExtResource("7_af182")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_ad4fd")
+"texture": ExtResource("7_af182")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_csyhl")
+"texture": ExtResource("6_fguym")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_wej1h")
+"texture": ExtResource("2_2yri3")
 }],
-"loop": false,
+"loop": true,
 "name": &"kick",
-"speed": 15.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_wej1h")
+"texture": ExtResource("2_2yri3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_u58b3")
+"texture": ExtResource("8_thkxb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_wej1h")
+"texture": ExtResource("2_2yri3")
 }],
 "loop": false,
 "name": &"punch",
@@ -92,16 +94,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_wej1h")
+"texture": ExtResource("2_2yri3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_4rlc8")
+"texture": ExtResource("5_6joe6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_kel6i")
+"texture": ExtResource("9_vlgl5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_4rlc8")
+"texture": ExtResource("5_6joe6")
 }],
 "loop": false,
 "name": &"run",
@@ -109,34 +111,35 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a03y3"]
-size = Vector2(215, 211)
+size = Vector2(170, 218.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r26k"]
-size = Vector2(210.5, 22)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_no5dh"]
+size = Vector2(190.25, 22)
 
-[node name="CharacterBody2D2" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_ierp7")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(986, 472)
+position = Vector2(148, 466)
 scale = Vector2(7.09766, 8.06641)
 sprite_frames = SubResource("SpriteFrames_jeulh")
 animation = &"run"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(986, 455)
+position = Vector2(162, 452)
 shape = SubResource("RectangleShape2D_a03y3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(978, 319)
-shape = SubResource("RectangleShape2D_8r26k")
+position = Vector2(154, 313)
+shape = SubResource("RectangleShape2D_no5dh")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_left = 874.0
-offset_top = 307.0
-offset_right = 1086.0
-offset_bottom = 330.0
+offset_left = 60.0
+offset_top = 302.0
+offset_right = 252.0
+offset_bottom = 325.0
 value = 100.0
 fill_mode = 1
 nine_patch_stretch = true
