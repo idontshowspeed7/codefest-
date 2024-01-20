@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bvbbj7ltnbsum"]
+[gd_scene load_steps=17 format=3 uid="uid://bvbbj7ltnbsum"]
 
 [ext_resource type="Texture2D" uid="uid://c2xlthkxu0kad" path="res://backg1.png" id="1_lr1ic"]
 [ext_resource type="Texture2D" uid="uid://ca6ssdwtbo33m" path="res://ground.png" id="2_huyi0"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://ci0j00jvfh6u3" path="res://jump3.png" id="5_rnf27"]
 [ext_resource type="Script" path="res://Sprite2D.gd" id="6_3uyso"]
 [ext_resource type="Texture2D" uid="uid://dmcmyjwmbmkqd" path="res://jump1.png" id="7_yr841"]
-[ext_resource type="Texture2D" uid="uid://dlc5x6o6n151a" path="res://run2.png" id="11_obv7r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7gk5"]
 size = Vector2(1150, 171)
@@ -82,23 +81,6 @@ animations = [{
 "loop": false,
 "name": &"punch",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_poiin")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_qfcnq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_obv7r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_qfcnq")
-}],
-"loop": false,
-"name": &"run",
-"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a03y3"]
@@ -147,7 +129,7 @@ texture_filter = 1
 position = Vector2(132.438, 463.063)
 scale = Vector2(7.09766, 8.06641)
 sprite_frames = SubResource("SpriteFrames_jeulh")
-animation = &"run"
+frame_progress = 0.405734
 flip_h = true
 script = ExtResource("6_3uyso")
 
