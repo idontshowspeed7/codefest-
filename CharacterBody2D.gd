@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 500.0
-const JUMP_VELOCITY = -700.0
+const SPEED = 700.0
+const JUMP_VELOCITY = -900.0
 @onready var sprite_2d = $Sprite2D
 
 # Gravity variable
@@ -35,5 +35,5 @@ func _physics_process(_delta):
 		move_and_slide()
 
 	# Flip the sprite based on the movement direction.
-		var is_left = velocity.x < 0
+		var is_left = velocity.x > 0
 		sprite_2d.flip_h = is_left

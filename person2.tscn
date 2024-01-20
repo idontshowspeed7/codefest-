@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d3a5p60mvrf21"]
+[gd_scene load_steps=14 format=3 uid="uid://d3a5p60mvrf21"]
 
 [ext_resource type="Script" path="res://person2.gd" id="1_ierp7"]
 [ext_resource type="Texture2D" uid="uid://u4xti7l3m2p8" path="res://dude 2.png" id="2_2yri3"]
@@ -9,8 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://8exgg206y3m6" path="res://dudekick.png" id="7_af182"]
 [ext_resource type="Texture2D" uid="uid://5nvo6qf6r88u" path="res://dude1.png" id="8_thkxb"]
 [ext_resource type="Texture2D" uid="uid://dlc5x6o6n151a" path="res://run2.png" id="9_vlgl5"]
-[ext_resource type="Texture2D" uid="uid://cskkgyfkuug2q" path="res://healthbar2.png" id="10_lwq5f"]
-[ext_resource type="Texture2D" uid="uid://ch2cwngtdeh5c" path="res://health1.png" id="11_7syb6"]
+[ext_resource type="Script" path="res://healthbar.gd" id="11_1ocgf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jeulh"]
 resource_local_to_scene = true
@@ -113,8 +112,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a03y3"]
 size = Vector2(112, 218.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_no5dh"]
-size = Vector2(190.25, 22)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_byk8a"]
+radius = 84.0
+height = 260.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_ierp7")
@@ -129,17 +129,10 @@ sprite_frames = SubResource("SpriteFrames_jeulh")
 position = Vector2(133, 452)
 shape = SubResource("RectangleShape2D_a03y3")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(127, 314)
-shape = SubResource("RectangleShape2D_no5dh")
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(33, 301)
+script = ExtResource("11_1ocgf")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_left = 33.0
-offset_top = 301.0
-offset_right = 225.0
-offset_bottom = 324.0
-value = 100.0
-fill_mode = 1
-nine_patch_stretch = true
-texture_under = ExtResource("10_lwq5f")
-texture_over = ExtResource("11_7syb6")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(100, 148)
+shape = SubResource("CapsuleShape2D_byk8a")

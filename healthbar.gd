@@ -1,16 +1,24 @@
-extends CharacterBody2D
+extends Area2D
 
-@onready var health_bar = $HealthBar  # Reference to the HealthBar node
+# Player variables
+var maxHealth : int = 100
+var currentHealth : int = maxHealth
 
-func _ready():
-	pass
+# Function to handle taking damage
+func takeDamage(damage: int) -> void:
+	currentHealth -= damage
+	if currentHealth <= 0:
+	 
+		queue_free()
+		print("YOU DIED")
 
-# Call this function when the player takes damage
-func take_damage(damage : int):
-	health_bar.take_damage(damage)
+# Called when the Area2D area enters another area
+func _on_Hitbox_area_entered(area: Area2D) -> void:
+	# Check if the entered area is an enemy
+	if area.has_method("getDamage"):
+		# Get the damage value from the enemy and call takeDamage
+		var damage = area.getDamage()
+		takeDamage(damage)
 
-# Call this function when the player heals
-func heal(healing : int):
-	health_bar.heal(healing)
 
 
