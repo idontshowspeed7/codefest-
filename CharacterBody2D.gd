@@ -22,7 +22,8 @@ func _physics_process(_delta):
 				sprite_2d.play("jump")
 		if (velocity.x > 1 || velocity.x < -1):
 				sprite_2d.play("run")
-
+		if velocity.x == 0:
+				sprite_2d.play("default")
 	
 
 	# Add the gravity.
