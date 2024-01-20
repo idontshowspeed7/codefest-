@@ -3,7 +3,6 @@ extends CharacterBody2D
 const SPEED = 500.0
 const JUMP_VELOCITY = -700.0
 @onready var sprite_2d = $Sprite2D
-@onready var animation_name = $CharacterBody2D
 
 # Gravity variable
 var gravity = 1300

@@ -21,10 +21,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -258.0
-offset_top = -240.0
-offset_right = 190.0
-offset_bottom = 312.0
+offset_left = -260.0
+offset_top = -215.0
+offset_right = 188.0
+offset_bottom = 337.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_8e16k")
@@ -33,7 +33,7 @@ texture = ExtResource("1_8e16k")
 texture_filter = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect"]
-position = Vector2(575, 645.5)
+position = Vector2(555, 650)
 shape = SubResource("RectangleShape2D_c7gk5")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
@@ -46,10 +46,10 @@ position = Vector2(1204.5, 396.5)
 shape = SubResource("RectangleShape2D_nkjfl")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect"]
-offset_left = -11.0
-offset_top = 543.0
-offset_right = 1182.0
-offset_bottom = 774.0
+offset_left = -28.0
+offset_top = 542.0
+offset_right = 1165.0
+offset_bottom = 773.0
 texture = ExtResource("2_huyi0")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_d234r")]

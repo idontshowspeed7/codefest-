@@ -127,7 +127,7 @@ animation = &"run"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(130.5, 385.75)
+position = Vector2(133, 383)
 shape = SubResource("RectangleShape2D_a03y3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]

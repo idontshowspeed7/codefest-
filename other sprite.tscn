@@ -113,33 +113,32 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a03y3"]
 size = Vector2(170, 218.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r26k"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_no5dh"]
 size = Vector2(190.25, 22)
 
-[node name="CharacterBody2D2" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_t4tte")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(986, 472)
+position = Vector2(881, 482)
 scale = Vector2(7.09766, 8.06641)
 sprite_frames = SubResource("SpriteFrames_jeulh")
-animation = &"run"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(995, 458.75)
+position = Vector2(887, 467)
 shape = SubResource("RectangleShape2D_a03y3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(988.125, 319)
-shape = SubResource("RectangleShape2D_8r26k")
+position = Vector2(876, 322)
+shape = SubResource("RectangleShape2D_no5dh")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_left = 894.0
-offset_top = 307.0
-offset_right = 1086.0
-offset_bottom = 330.0
+offset_left = 780.0
+offset_top = 310.0
+offset_right = 972.0
+offset_bottom = 333.0
 value = 100.0
 fill_mode = 1
 nine_patch_stretch = true
