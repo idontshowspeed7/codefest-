@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bvbbj7ltnbsum"]
+[gd_scene load_steps=21 format=3 uid="uid://bvbbj7ltnbsum"]
 
 [ext_resource type="Texture2D" uid="uid://qhjsbhsdktjl" path="res://backg2.png" id="1_8e16k"]
 [ext_resource type="Texture2D" uid="uid://cp6rk5c36bxlr" path="res://ground.png" id="2_huyi0"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dlc5x6o6n151a" path="res://run2.png" id="11_obv7r"]
 [ext_resource type="Texture2D" uid="uid://ch2cwngtdeh5c" path="res://health1.png" id="13_beii8"]
 [ext_resource type="Texture2D" uid="uid://cskkgyfkuug2q" path="res://healthbar2.png" id="14_7wp4q"]
+[ext_resource type="Script" path="res://CharacterBody2D2.gd" id="14_kmfx0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7gk5"]
 size = Vector2(1150, 171)
@@ -133,9 +134,9 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -224.0
+offset_left = -258.0
 offset_top = -240.0
-offset_right = 224.0
+offset_right = 190.0
 offset_bottom = 312.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -179,6 +180,10 @@ flip_h = true
 position = Vector2(132.5, 454.5)
 shape = SubResource("RectangleShape2D_a03y3")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(130.75, 315)
+shape = SubResource("RectangleShape2D_8r26k")
+
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CharacterBody2D"]
 offset_left = 25.0
 offset_top = 304.0
@@ -190,6 +195,32 @@ nine_patch_stretch = true
 texture_under = ExtResource("14_7wp4q")
 texture_over = ExtResource("13_beii8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/TextureProgressBar"]
-position = Vector2(105.75, 11)
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+script = ExtResource("14_kmfx0")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
+texture_filter = 1
+position = Vector2(999, 443)
+scale = Vector2(7.09766, 8.06641)
+sprite_frames = SubResource("SpriteFrames_jeulh")
+animation = &"kick"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(1010, 441)
+shape = SubResource("RectangleShape2D_a03y3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(989, 300)
 shape = SubResource("RectangleShape2D_8r26k")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CharacterBody2D2"]
+offset_left = 887.0
+offset_top = 288.0
+offset_right = 1099.0
+offset_bottom = 311.0
+value = 100.0
+fill_mode = 1
+nine_patch_stretch = true
+texture_under = ExtResource("14_7wp4q")
+texture_over = ExtResource("13_beii8")
