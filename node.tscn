@@ -60,14 +60,32 @@ animations = [{
 "texture": ExtResource("4_poiin")
 }, {
 "duration": 1.0,
+"texture": ExtResource("7_yr841")
+}, {
+"duration": 1.0,
 "texture": ExtResource("4_gbnfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gbnfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gbnfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gbnfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gbnfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rnf27")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_poiin")
 }],
 "loop": false,
 "name": &"kick",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -132,7 +150,7 @@ shape = SubResource("RectangleShape2D_c7gk5")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TextureRect"]
-position = Vector2(-44.5, 396.5)
+position = Vector2(-41, 404)
 shape = SubResource("RectangleShape2D_gtghr")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="TextureRect"]
@@ -147,7 +165,7 @@ texture_filter = 1
 position = Vector2(132.438, 463.063)
 scale = Vector2(7.09766, 8.06641)
 sprite_frames = SubResource("SpriteFrames_jeulh")
-animation = &"run"
+animation = &"kick"
 flip_h = true
 script = ExtResource("6_3uyso")
 
