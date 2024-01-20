@@ -47,3 +47,5 @@ offset_right = 918.0
 offset_bottom = 607.0
 text = "ONLINE MULTIPLAYER
 (Coming Soon)"
+
+[connection signal="pressed" from="TextureRect/local" to="." method="_on_local_pressed"]
