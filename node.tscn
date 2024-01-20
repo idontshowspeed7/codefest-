@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://bvbbj7ltnbsum"]
+[gd_scene load_steps=3 format=3 uid="uid://bvbbj7ltnbsum"]
+
+[ext_resource type="Texture2D" uid="uid://c2xlthkxu0kad" path="res://backg1.png" id="1_lr1ic"]
+[ext_resource type="Texture2D" uid="uid://5nvo6qf6r88u" path="res://dude1.png" id="2_y7juc"]
 
 [node name="Node" type="Node"]
+
+[node name="background" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lr1ic")
+
+[node name="dude" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(210, 495)
+scale = Vector2(4.65625, 5.21875)
+texture = ExtResource("2_y7juc")
