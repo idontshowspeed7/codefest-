@@ -1,60 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3fyd6758wft5"]
+[gd_scene load_steps=3 format=3 uid="uid://c3fyd6758wft5"]
 
-[ext_resource type="Texture2D" uid="uid://bbsjmwrama0lw" path="res://menubackg.png" id="1_fdrs3"]
+[ext_resource type="Texture2D" uid="uid://l6xy6klnwfpv" path="res://menubackg2.png" id="1_bbmen"]
 [ext_resource type="Script" path="res://localmultiplayer.gd" id="2_1q5i2"]
-[ext_resource type="Texture2D" uid="uid://dejrk5yi8s34" path="res://name.png" id="2_xp41k"]
 
 [node name="Node" type="Node"]
+script = ExtResource("2_1q5i2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = 1.0
-offset_right = -1.0
-offset_bottom = 1.0
+offset_left = -2.0
+offset_top = -45.0
+offset_right = 3.0
+offset_bottom = 71.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_fdrs3")
+texture = ExtResource("1_bbmen")
+expand_mode = 1
 
-[node name="Button3" type="Button" parent="TextureRect"]
+[node name="local" type="Button" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.14
 anchor_top = 0.187
 anchor_right = 0.45
 anchor_bottom = 0.405
-offset_left = 633.72
-offset_top = 261.824
-offset_right = 578.6
-offset_bottom = 248.56
-text = "SINGLEPLAYER"
-script = ExtResource("2_1q5i2")
-
-[node name="Button2" type="Button" parent="TextureRect"]
-offset_left = 63.0
-offset_top = 385.0
-offset_right = 365.0
-offset_bottom = 513.0
+offset_left = 97.02
+offset_top = 337.132
+offset_right = 42.35
+offset_bottom = 304.58
 text = "LOCAL MULTIPLAYER"
 
-[node name="Button" type="Button" parent="TextureRect"]
-offset_left = 438.0
-offset_top = 386.0
-offset_right = 740.0
-offset_bottom = 514.0
+[node name="single" type="Button" parent="TextureRect"]
+offset_left = 428.0
+offset_top = 310.0
+offset_right = 730.0
+offset_bottom = 438.0
+text = "SINGLEPLAYER"
+
+[node name="online" type="Button" parent="TextureRect"]
+offset_left = 616.0
+offset_top = 479.0
+offset_right = 918.0
+offset_bottom = 607.0
 text = "ONLINE MULTIPLAYER
 (Coming Soon)"
-
-[node name="TextureRect" type="TextureRect" parent="TextureRect"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -338.0
-offset_right = 400.0
-offset_bottom = 416.0
-grow_horizontal = 2
-texture = ExtResource("2_xp41k")
