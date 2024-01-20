@@ -9,7 +9,7 @@ const JUMP_VELOCITY = -700.0
 var gravity = 1300
 
 # Keep track of the current animation state
-var current_animation = "default"
+
 
 func _physics_process(_delta):
 	
@@ -22,9 +22,7 @@ func _physics_process(_delta):
 				sprite_2d.play("jump")
 		if (velocity.x > 1 || velocity.x < -1):
 				sprite_2d.play("run")
-		
 	
-
 		if not is_on_floor():
 			velocity.y += gravity * _delta
 		

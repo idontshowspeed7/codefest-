@@ -1,0 +1,146 @@
+[gd_scene load_steps=15 format=3 uid="uid://d0qnbimud5dck"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_tds3m"]
+[ext_resource type="Texture2D" uid="uid://chrjntgjojawl" path="res://flippedpics/dude2flipped.png" id="2_dsklt"]
+[ext_resource type="Texture2D" uid="uid://b3odtg1fkau47" path="res://flippedpics/run2flipped.png" id="3_e662l"]
+[ext_resource type="Texture2D" uid="uid://dtyicat3cx0kt" path="res://flippedpics/jump1flipped.png" id="4_fx0xr"]
+[ext_resource type="Texture2D" uid="uid://7yrt2tyweoly" path="res://flippedpics/jump2flipped.png" id="5_nq5cb"]
+[ext_resource type="Texture2D" uid="uid://cbvcmmfbbavka" path="res://flippedpics/jump3flipped.png" id="6_2lnmw"]
+[ext_resource type="Texture2D" uid="uid://dkb7l1mgtkdg0" path="res://flippedpics/dudekickflipped.png" id="7_sbtb6"]
+[ext_resource type="Texture2D" uid="uid://br2grx70jbvdb" path="res://dude1flipped.png" id="8_thp68"]
+[ext_resource type="Texture2D" uid="uid://dqja16im1jc24" path="res://flippedpics/dudebounceflipped.png" id="9_hse41"]
+[ext_resource type="Texture2D" uid="uid://cskkgyfkuug2q" path="res://healthbar2.png" id="10_eop60"]
+[ext_resource type="Texture2D" uid="uid://ch2cwngtdeh5c" path="res://health1.png" id="11_hhbx3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jeulh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dsklt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e662l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dsklt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fx0xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nq5cb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2lnmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dsklt")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dsklt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fx0xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sbtb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sbtb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sbtb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sbtb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sbtb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2lnmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dsklt")
+}],
+"loop": false,
+"name": &"kick",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dsklt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_thp68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dsklt")
+}],
+"loop": false,
+"name": &"punch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dsklt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nq5cb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hse41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nq5cb")
+}],
+"loop": false,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a03y3"]
+size = Vector2(215, 211)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r26k"]
+size = Vector2(210.5, 22)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_tds3m")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(132, 398)
+scale = Vector2(7.09766, 8.06641)
+sprite_frames = SubResource("SpriteFrames_jeulh")
+animation = &"run"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(132, 383)
+shape = SubResource("RectangleShape2D_a03y3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(132, 248)
+shape = SubResource("RectangleShape2D_8r26k")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 25.0
+offset_top = 237.0
+offset_right = 237.0
+offset_bottom = 260.0
+value = 100.0
+fill_mode = 1
+nine_patch_stretch = true
+texture_under = ExtResource("10_eop60")
+texture_over = ExtResource("11_hhbx3")

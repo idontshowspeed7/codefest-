@@ -1,0 +1,144 @@
+[gd_scene load_steps=14 format=3 uid="uid://cugurynb45owb"]
+
+[ext_resource type="Texture2D" uid="uid://chrjntgjojawl" path="res://flippedpics/dude2flipped.png" id="1_f8gwi"]
+[ext_resource type="Texture2D" uid="uid://b3odtg1fkau47" path="res://flippedpics/run2flipped.png" id="2_3bq0c"]
+[ext_resource type="Texture2D" uid="uid://dtyicat3cx0kt" path="res://flippedpics/jump1flipped.png" id="3_l3jcd"]
+[ext_resource type="Texture2D" uid="uid://7yrt2tyweoly" path="res://flippedpics/jump2flipped.png" id="4_ahguy"]
+[ext_resource type="Texture2D" uid="uid://cbvcmmfbbavka" path="res://flippedpics/jump3flipped.png" id="5_3lrr7"]
+[ext_resource type="Texture2D" uid="uid://dkb7l1mgtkdg0" path="res://flippedpics/dudekickflipped.png" id="6_mxbog"]
+[ext_resource type="Texture2D" uid="uid://br2grx70jbvdb" path="res://dude1flipped.png" id="7_3o300"]
+[ext_resource type="Texture2D" uid="uid://dqja16im1jc24" path="res://flippedpics/dudebounceflipped.png" id="8_nruch"]
+[ext_resource type="Texture2D" uid="uid://cskkgyfkuug2q" path="res://healthbar2.png" id="9_ca1op"]
+[ext_resource type="Texture2D" uid="uid://ch2cwngtdeh5c" path="res://health1.png" id="10_mo2pw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jeulh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f8gwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3bq0c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f8gwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l3jcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ahguy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3lrr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_f8gwi")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f8gwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l3jcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mxbog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mxbog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mxbog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mxbog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mxbog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3lrr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_f8gwi")
+}],
+"loop": false,
+"name": &"kick",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f8gwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3o300")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_f8gwi")
+}],
+"loop": false,
+"name": &"punch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f8gwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ahguy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nruch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ahguy")
+}],
+"loop": false,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a03y3"]
+size = Vector2(215, 211)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r26k"]
+size = Vector2(210.5, 22)
+
+[node name="CharacterBody2D2" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(986, 472)
+scale = Vector2(7.09766, 8.06641)
+sprite_frames = SubResource("SpriteFrames_jeulh")
+animation = &"run"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(986, 455)
+shape = SubResource("RectangleShape2D_a03y3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(978, 319)
+shape = SubResource("RectangleShape2D_8r26k")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 874.0
+offset_top = 307.0
+offset_right = 1086.0
+offset_bottom = 330.0
+value = 100.0
+fill_mode = 1
+nine_patch_stretch = true
+texture_under = ExtResource("9_ca1op")
+texture_over = ExtResource("10_mo2pw")
