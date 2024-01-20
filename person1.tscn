@@ -110,10 +110,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a03y3"]
-size = Vector2(215, 211)
+size = Vector2(157, 216.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8r26k"]
-size = Vector2(210.5, 22)
+size = Vector2(199.25, 22)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_tds3m")
@@ -127,15 +127,15 @@ animation = &"run"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(132, 383)
+position = Vector2(130.5, 385.75)
 shape = SubResource("RectangleShape2D_a03y3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(132, 248)
+position = Vector2(137.625, 248)
 shape = SubResource("RectangleShape2D_8r26k")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_left = 25.0
+offset_left = 37.0
 offset_top = 237.0
 offset_right = 237.0
 offset_bottom = 260.0
