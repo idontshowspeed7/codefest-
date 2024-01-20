@@ -14,10 +14,10 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Handle jump.
+	# Handle jump and attacks.
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-	if Input.is_action_just_pressed("ui_down"):
+	if Input.is_action_just_pressed("ui_accept"):
 		sprite_2d.animation = "punch"
 
 	# Get the input direction and handle the movement/deceleration.
