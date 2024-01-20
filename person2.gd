@@ -11,11 +11,11 @@ var gravity = 1300
 
 func _physics_process(_delta):
 
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_pressed("punch"):
 			sprite_2d.play("punch")
-		if Input.is_action_just_pressed("ui_down"):
+		if Input.is_action_just_pressed("down"):
 			sprite_2d.play("kick")
-		if Input.is_action_just_pressed("ui_up") and is_on_floor():
+		if Input.is_action_just_pressed("up") and is_on_floor():
 				velocity.y = JUMP_VELOCITY
 				sprite_2d.play("jump")
 		if (velocity.x > 1 || velocity.x < -1):
@@ -25,7 +25,7 @@ func _physics_process(_delta):
 			velocity.y += gravity * _delta
 		
 	
-		var direction = Input.get_axis("ui_left", "ui_right")
+		var direction = Input.get_axis("left", "right")
 		if direction:
 			velocity.x = direction * SPEED
 		else:
@@ -34,5 +34,5 @@ func _physics_process(_delta):
 		move_and_slide()
 
 	
-		var is_left = velocity.x < 0
-		sprite_2d.flip_h = is_left
+		var is_right = velocity.x < 0
+		sprite_2d.flip_h = is_right

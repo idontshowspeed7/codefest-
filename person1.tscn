@@ -110,7 +110,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a03y3"]
-size = Vector2(157, 216.5)
+size = Vector2(112, 216.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8r26k"]
 size = Vector2(199.25, 22)
@@ -127,7 +127,7 @@ animation = &"run"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1000, 376)
+position = Vector2(1016, 376)
 shape = SubResource("RectangleShape2D_a03y3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]

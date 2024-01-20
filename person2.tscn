@@ -74,7 +74,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_2yri3")
 }],
-"loop": true,
+"loop": false,
 "name": &"kick",
 "speed": 5.0
 }, {
@@ -111,7 +111,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a03y3"]
-size = Vector2(170, 218.5)
+size = Vector2(112, 218.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_no5dh"]
 size = Vector2(190.25, 22)
@@ -124,11 +124,9 @@ texture_filter = 1
 position = Vector2(148, 466)
 scale = Vector2(7.09766, 8.06641)
 sprite_frames = SubResource("SpriteFrames_jeulh")
-animation = &"run"
-flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(162, 452)
+position = Vector2(133, 452)
 shape = SubResource("RectangleShape2D_a03y3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
