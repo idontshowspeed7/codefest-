@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bvbbj7ltnbsum"]
+[gd_scene load_steps=9 format=3 uid="uid://bvbbj7ltnbsum"]
 
 [ext_resource type="Texture2D" uid="uid://c2xlthkxu0kad" path="res://backg1.png" id="1_lr1ic"]
 [ext_resource type="Texture2D" uid="uid://ca6ssdwtbo33m" path="res://ground.png" id="2_huyi0"]
 [ext_resource type="Texture2D" uid="uid://5nvo6qf6r88u" path="res://dude1.png" id="2_y7juc"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="3_swaf2"]
-[ext_resource type="Texture2D" uid="uid://ctyn61iqw4rq6" path="res://health1.png" id="5_76qvn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7gk5"]
 size = Vector2(1150, 171)
@@ -34,10 +33,10 @@ texture_filter = 1
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect"]
 texture_filter = 1
-offset_left = -2.0
-offset_top = 561.0
-offset_right = 1150.0
-offset_bottom = 807.0
+offset_left = -6.0
+offset_top = 548.0
+offset_right = 1146.0
+offset_bottom = 794.0
 texture = ExtResource("2_huyi0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect"]
@@ -70,12 +69,3 @@ shape = SubResource("RectangleShape2D_a03y3")
 [node name="ProgressBar" type="ProgressBar" parent="CharacterBody2D"]
 offset_right = 4.0
 offset_bottom = 27.0
-fill_mode = 1
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CharacterBody2D/ProgressBar"]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 214.0
-offset_right = 432.0
-offset_bottom = 284.0
-texture_under = ExtResource("5_76qvn")
