@@ -1,10 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3a5p60mvrf21"]
+[gd_scene load_steps=16 format=3 uid="uid://d3a5p60mvrf21"]
 
 [ext_resource type="Script" path="res://person2.gd" id="1_ierp7"]
 [ext_resource type="Texture2D" uid="uid://u4xti7l3m2p8" path="res://dude 2.png" id="2_2yri3"]
 [ext_resource type="Texture2D" uid="uid://cpgorx50o70we" path="res://dudebounce.png" id="3_w5w2y"]
 [ext_resource type="Texture2D" uid="uid://dmcmyjwmbmkqd" path="res://jump1.png" id="4_o8tur"]
+[ext_resource type="Texture2D" uid="uid://dk7fbhreb8f82" path="res://death1.png" id="4_vdt7y"]
 [ext_resource type="Texture2D" uid="uid://b81wbw0vkiauv" path="res://jump2.png" id="5_6joe6"]
+[ext_resource type="Texture2D" uid="uid://dtxyae21pun4s" path="res://death2.png" id="5_nvjhd"]
 [ext_resource type="Texture2D" uid="uid://ci0j00jvfh6u3" path="res://jump3.png" id="6_fguym"]
 [ext_resource type="Texture2D" uid="uid://8exgg206y3m6" path="res://dudekick.png" id="7_af182"]
 [ext_resource type="Texture2D" uid="uid://5nvo6qf6r88u" path="res://dude1.png" id="8_thkxb"]
@@ -14,6 +16,23 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_jeulh"]
 resource_local_to_scene = true
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2yri3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w5w2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vdt7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nvjhd")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_2yri3")
@@ -124,6 +143,7 @@ texture_filter = 1
 position = Vector2(148, 466)
 scale = Vector2(7.09766, 8.06641)
 sprite_frames = SubResource("SpriteFrames_jeulh")
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(133, 452)

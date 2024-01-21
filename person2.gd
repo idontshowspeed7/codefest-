@@ -3,11 +3,18 @@ extends CharacterBody2D
 const SPEED = 700.0
 const JUMP_VELOCITY = -900.0
 @onready var sprite_2d = $Sprite2D
+var progress_bar : ProgressBar
+var initial_value : int = 100
+
 
 
 var gravity = 1300
 
-
+func _ready():
+	progress_bar = ProgressBar.new()
+	progress_bar.max_value = initial_value
+	progress_bar.value = initial_value
+	add_child(progress_bar)
 
 func _physics_process(_delta):
 
@@ -36,3 +43,12 @@ func _physics_process(_delta):
 	
 		var is_right = velocity.x < 0
 		sprite_2d.flip_h = is_right
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept"):
+		initial_value -= 5
+	if Input.is_action_just_pressed("ui_down"):
+		initial_value -= 10
+	if initial_value <= 0:
+		sprite_2d.play("death")
+		print ("you died")
