@@ -33,13 +33,6 @@ offset_right = 42.35
 offset_bottom = 304.58
 text = "LOCAL MULTIPLAYER"
 
-[node name="single" type="Button" parent="TextureRect"]
-offset_left = 428.0
-offset_top = 310.0
-offset_right = 730.0
-offset_bottom = 438.0
-text = "SINGLEPLAYER"
-
 [node name="online" type="Button" parent="TextureRect"]
 offset_left = 616.0
 offset_top = 479.0

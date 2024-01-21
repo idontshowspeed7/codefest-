@@ -23,23 +23,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_w5w2y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_vdt7y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_nvjhd")
-}],
-"loop": false,
-"name": &"death",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_2yri3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_w5w2y")
 }],
 "loop": true,
 "name": &"default",
@@ -102,6 +85,23 @@ animations = [{
 "texture": ExtResource("2_2yri3")
 }, {
 "duration": 1.0,
+"texture": ExtResource("3_w5w2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vdt7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nvjhd")
+}],
+"loop": false,
+"name": &"kill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2yri3")
+}, {
+"duration": 1.0,
 "texture": ExtResource("8_thkxb")
 }, {
 "duration": 1.0,
@@ -144,9 +144,7 @@ texture_filter = 1
 position = Vector2(148, 466)
 scale = Vector2(7.09766, 8.06641)
 sprite_frames = SubResource("SpriteFrames_jeulh")
-animation = &"death"
-frame = 3
-frame_progress = 1.0
+animation = &"kill"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(133, 461.625)
@@ -161,7 +159,7 @@ position = Vector2(100, 148)
 shape = SubResource("CapsuleShape2D_byk8a")
 
 [node name="Healthbar" parent="." instance=ExtResource("13_h5pa6")]
-offset_left = 44.0
-offset_top = 257.0
-offset_right = 331.0
-offset_bottom = 322.0
+offset_left = 52.0
+offset_top = 279.0
+offset_right = 218.0
+offset_bottom = 323.0

@@ -26,7 +26,7 @@ func _physics_process(_delta):
 		if (velocity.x > 1 || velocity.x < -1):
 				sprite_2d.play("run")
 		if Input.is_action_just_pressed("ui_down"):
-				sprite_2d.play("death")
+				sprite_2d.play("kill")
 		
 		if not is_on_floor():
 			velocity.y += gravity * _delta
