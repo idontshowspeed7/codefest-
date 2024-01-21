@@ -3,10 +3,14 @@ extends CharacterBody2D
 const SPEED = 700.0
 const JUMP_VELOCITY = -900.0
 @onready var sprite_2d = $Sprite2D
+@onready var healthbar = $Healthbar
 
 # Gravity variable
 var gravity = 1300
 
+func _ready():
+	var health = 6
+	healthbar._init_health(health)
 
 func _physics_process(_delta):
 
