@@ -45,7 +45,7 @@ offset_left = 616.0
 offset_top = 479.0
 offset_right = 918.0
 offset_bottom = 607.0
-text = "ONLINE MULTIPLAYER
-(Coming Soon)"
+text = "HOW TO PLAY"
 
 [connection signal="pressed" from="TextureRect/local" to="." method="_on_local_pressed"]
+[connection signal="pressed" from="TextureRect/online" to="." method="_on_online_pressed"]

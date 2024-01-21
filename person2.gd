@@ -5,7 +5,7 @@ extends CharacterBody2D
 const SPEED = 500.0
 const JUMP_VELOCITY = -700.0
 @onready var sprite_2d = $Sprite2D
-@onready var Healthbar = $Helthbar
+@onready var Healthbar = $Healthbar
 
 
 var gravity = 1300
@@ -25,7 +25,9 @@ func _physics_process(_delta):
 				sprite_2d.play("jump")
 		if (velocity.x > 1 || velocity.x < -1):
 				sprite_2d.play("run")
-	
+		if Input.is_action_just_pressed("ui_down"):
+				sprite_2d.play("death")
+		
 		if not is_on_floor():
 			velocity.y += gravity * _delta
 		
@@ -41,3 +43,4 @@ func _physics_process(_delta):
 	
 		var is_right = velocity.x < 0
 		sprite_2d.flip_h = is_right
+		

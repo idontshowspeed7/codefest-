@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://yr80s8q2xkvi"]
+
+[ext_resource type="Texture2D" uid="uid://4v1wvs41er0q" path="res://howtoplay.png" id="1_ahvfi"]
+
+[node name="Node2D" type="TextureRect"]
+
+[node name="Howtoplay" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(633.5, 512.5)
+scale = Vector2(1.271, 1.36133)
+texture = ExtResource("1_ahvfi")
