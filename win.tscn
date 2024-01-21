@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b60215kl4ef25"]
+
+[ext_resource type="Texture2D" uid="uid://drb4sfgrd632y" path="res://winscreen2.png" id="1_bik0y"]
+[ext_resource type="Script" path="res://win.gd" id="2_t0icq"]
+
+[node name="TextureRect" type="TextureRect"]
+texture_filter = 1
+offset_left = -12.0
+offset_top = -101.0
+offset_right = 1204.0
+offset_bottom = 750.0
+texture = ExtResource("1_bik0y")
+script = ExtResource("2_t0icq")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 596.0
+offset_right = 715.0
+offset_bottom = 633.0
+text = "BACK TO MENU"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

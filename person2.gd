@@ -27,6 +27,9 @@ func _physics_process(_delta):
 				sprite_2d.play("run")
 		if Input.is_action_just_pressed("ui_down"):
 				sprite_2d.play("kill")
+				$Timer.wait_time = 2.0
+				$Timer.start()
+				
 		
 		if not is_on_floor():
 			velocity.y += gravity * _delta
@@ -44,3 +47,7 @@ func _physics_process(_delta):
 		var is_right = velocity.x < 0
 		sprite_2d.flip_h = is_right
 		
+
+
+func _on_timer_timeout():
+	get_tree().change_scene_to_file("res://win.tscn")
