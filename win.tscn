@@ -20,4 +20,13 @@ offset_right = 715.0
 offset_bottom = 633.0
 text = "BACK TO MENU"
 
+[node name="rematch" type="Button" parent="."]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 542.0
+offset_right = 714.0
+offset_bottom = 579.0
+text = "REMATCH"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="rematch" to="." method="_on_rematch_pressed"]
